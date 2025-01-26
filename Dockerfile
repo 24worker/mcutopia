@@ -12,10 +12,9 @@ COPY utopiaf/ /utopia/
 
 # Initialize the server
 WORKDIR /utopia
-RUN java -jar ./server.jar
 
-# Accept the EULA
-RUN sed -i 's/false/true/g' ./eula.txt
+# Run Test
+RUN java -jar ./server.jar
 
 # Expose the port
 EXPOSE 25565
