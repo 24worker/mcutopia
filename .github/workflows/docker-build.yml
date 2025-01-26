@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          submodules: true  # Add this line to update submodules
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
