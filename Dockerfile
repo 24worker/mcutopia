@@ -20,4 +20,7 @@ WORKDIR /utopia
 EXPOSE 25565
 EXPOSE 25566
 
-CMD [ "java", "-jar", "server.jar" ]
+ENV JAVA_MAX_MEM=""
+ENV JAVA_MIN_MEM=""
+
+CMD java $( [ -n "$JAVA_MIN_MEM" ] && echo "-Xms${JAVA_MIN_MEM}" ) $( [ -n "$JAVA_MAX_MEM" ] && echo "-Xmx${JAVA_MAX_MEM}" ) -jar server.jar

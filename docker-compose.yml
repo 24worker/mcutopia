@@ -1,0 +1,12 @@
+services:
+  app:
+    image: 24workers/mcutopia:latest
+    environment:
+    #设置服务器的最大内存和最小内存
+      # 最大内存
+      - JAVA_MAX_MEM=4g
+      # 最小内存-最小内存一般可不用更改
+      - JAVA_MIN_MEM=512m
+    ports:
+      - "25565:25565"
+      - "25566:25566"
