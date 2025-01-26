@@ -8,7 +8,7 @@ LABEL description="Minecraft UTOPIA Server"
 RUN apk add --no-cache openjdk17-jre-headless curl
 
 # Copy the server files
-COPY src/ /utopia/
+COPY utopiaf/ /utopia/
 
 # Initialize the server
 WORKDIR /utopia
