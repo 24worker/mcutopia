@@ -14,7 +14,7 @@ COPY utopiaf/ /utopia/
 WORKDIR /utopia
 
 # Run Test
-RUN java -jar ./server.jar
+# RUN java -jar ./server.jar
 
 # Expose the port
 EXPOSE 25565
